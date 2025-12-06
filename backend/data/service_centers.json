@@ -1,0 +1,158 @@
+{
+  "version": "2025-10-11-v1",
+  "source_note": "Service centers and workshops database for India organized by state and city",
+  "service_centers": {
+    "delhi": [
+      {
+        "name": "AutoCare Pro Delhi",
+        "address": "Sector 18, Noida, Delhi NCR",
+        "phone": "+91-11-4567-8901",
+        "rating": 4.5,
+        "speciality": ["bodywork", "painting", "insurance_claims"],
+        "working_hours": "09:00-19:00",
+        "estimated_wait_days": 2,
+        "coordinates": {"lat": 28.6139, "lng": 77.2090}
+      },
+      {
+        "name": "Delhi Auto Workshop",
+        "address": "Karol Bagh, New Delhi",
+        "phone": "+91-11-2345-6789",
+        "rating": 4.2,
+        "speciality": ["dent_removal", "paint_repair", "part_replacement"],
+        "working_hours": "08:00-20:00",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 28.6519, "lng": 77.1900}
+      }
+    ],
+    "mumbai": [
+      {
+        "name": "Mumbai Car Care Center",
+        "address": "Andheri West, Mumbai",
+        "phone": "+91-22-9876-5432",
+        "rating": 4.7,
+        "speciality": ["collision_repair", "premium_cars", "insurance_approved"],
+        "working_hours": "08:30-18:30",
+        "estimated_wait_days": 3,
+        "coordinates": {"lat": 19.0760, "lng": 72.8777}
+      },
+      {
+        "name": "Reliable Auto Service",
+        "address": "Bandra East, Mumbai",
+        "phone": "+91-22-1234-5678",
+        "rating": 4.3,
+        "speciality": ["quick_service", "dent_repair", "painting"],
+        "working_hours": "09:00-19:00",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 19.0596, "lng": 72.8295}
+      }
+    ],
+    "bangalore": [
+      {
+        "name": "Bangalore Auto Experts",
+        "address": "Whitefield, Bangalore",
+        "phone": "+91-80-8765-4321",
+        "rating": 4.6,
+        "speciality": ["luxury_cars", "advanced_repair", "OEM_parts"],
+        "working_hours": "09:00-18:00",
+        "estimated_wait_days": 2,
+        "coordinates": {"lat": 12.9716, "lng": 77.5946}
+      }
+    ],
+    "chennai": [
+      {
+        "name": "Chennai Car Clinic",
+        "address": "T. Nagar, Chennai",
+        "phone": "+91-44-5678-9012",
+        "rating": 4.4,
+        "speciality": ["bodywork", "electrical", "air_conditioning"],
+        "working_hours": "08:00-19:00",
+        "estimated_wait_days": 2,
+        "coordinates": {"lat": 13.0827, "lng": 80.2707}
+      }
+    ],
+    "hyderabad": [
+      {
+        "name": "Hyderabad Auto Solutions",
+        "address": "Gachibowli, Hyderabad",
+        "phone": "+91-40-3456-7890",
+        "rating": 4.3,
+        "speciality": ["collision_repair", "paint_shop", "quick_service"],
+        "working_hours": "09:00-18:30",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 17.3850, "lng": 78.4867}
+      }
+    ],
+    "pune": [
+      {
+        "name": "Pune Premium Auto Care",
+        "address": "Hinjewadi, Pune",
+        "phone": "+91-20-7890-1234",
+        "rating": 4.5,
+        "speciality": ["German_cars", "premium_service", "warranty_work"],
+        "working_hours": "08:30-18:00",
+        "estimated_wait_days": 3,
+        "coordinates": {"lat": 18.5204, "lng": 73.8567}
+      }
+    ],
+    "kolkata": [
+      {
+        "name": "Kolkata Car Care",
+        "address": "Salt Lake City, Kolkata",
+        "phone": "+91-33-4567-8901",
+        "rating": 4.1,
+        "speciality": ["budget_repair", "local_parts", "quick_turnaround"],
+        "working_hours": "08:00-19:00",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 22.5726, "lng": 88.3639}
+      }
+    ],
+    "ahmedabad": [
+      {
+        "name": "Gujarat Auto Workshop",
+        "address": "Satellite, Ahmedabad",
+        "phone": "+91-79-2345-6789",
+        "rating": 4.2,
+        "speciality": ["commercial_vehicles", "bodywork", "paint_shop"],
+        "working_hours": "08:00-20:00",
+        "estimated_wait_days": 2,
+        "coordinates": {"lat": 23.0225, "lng": 72.5714}
+      }
+    ],
+    "jaipur": [
+      {
+        "name": "Rajasthan Auto Service",
+        "address": "Malviya Nagar, Jaipur",
+        "phone": "+91-141-8901-2345",
+        "rating": 4.0,
+        "speciality": ["general_repair", "affordable_service", "local_expertise"],
+        "working_hours": "08:30-19:30",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 26.9124, "lng": 75.7873}
+      }
+    ],
+    "lucknow": [
+      {
+        "name": "UP Auto Solutions",
+        "address": "Gomti Nagar, Lucknow",
+        "phone": "+91-522-3456-7890",
+        "rating": 3.9,
+        "speciality": ["budget_friendly", "quick_repair", "local_parts"],
+        "working_hours": "08:00-19:00",
+        "estimated_wait_days": 1,
+        "coordinates": {"lat": 26.8467, "lng": 80.9462}
+      }
+    ],
+    "default": [
+      {
+        "name": "Local Auto Workshop",
+        "address": "City Center",
+        "phone": "Contact local directory",
+        "rating": 4.0,
+        "speciality": ["general_repair", "basic_service"],
+        "working_hours": "09:00-18:00",
+        "estimated_wait_days": 2,
+        "coordinates": {"lat": 0, "lng": 0}
+      }
+    ]
+  }
+}

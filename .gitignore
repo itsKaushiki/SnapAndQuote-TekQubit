@@ -1,0 +1,71 @@
+# Root Git Ignore
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Build artifacts
+coverage/
+dist/
+.cache/
+.next/
+.out/
+build/
+
+# Uploads and generated assets
+uploads/
+reports/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+.env/
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights & large artifacts
+*.pt
+*.onnx
+*.weights
+*.h5
+*_saved_model/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tgz
+*.tar.gz
+*.zip
+
+# Frontend build
+frontend/build/

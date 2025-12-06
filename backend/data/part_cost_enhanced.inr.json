@@ -1,0 +1,254 @@
+{
+  "currency": "INR",
+  "version": "2025-10-11-v2-enhanced",
+  "source_note": "Enhanced pricing data with repair vs replace recommendations, service time estimates, and damage severity analysis for Indian automotive market.",
+  "parts": {
+    "bumper": { 
+      "min": 6000, 
+      "aftermarket": 9000, 
+      "avg": 15000, 
+      "oem": 20000, 
+      "max": 25000,
+      "repair": {
+        "minor_scratches": 2500,
+        "paint_damage": 4000,
+        "dents": 3500,
+        "cracks": 5000
+      },
+      "repair_threshold": 0.4,
+      "repair_time_hours": {
+        "minor": 2,
+        "moderate": 4,
+        "severe": 8
+      },
+      "complexity": "medium"
+    },
+    "door": { 
+      "min": 8000, 
+      "aftermarket": 12000, 
+      "avg": 18000, 
+      "oem": 25000, 
+      "max": 32000,
+      "repair": {
+        "dent_removal": 3000,
+        "paint_repair": 4500,
+        "panel_beating": 6000,
+        "window_mechanism": 8000
+      },
+      "repair_threshold": 0.35,
+      "repair_time_hours": {
+        "minor": 3,
+        "moderate": 6,
+        "severe": 12
+      },
+      "complexity": "high"
+    },
+    "headlight": { 
+      "min": 4000, 
+      "aftermarket": 6000, 
+      "avg": 9000, 
+      "oem": 14000, 
+      "max": 18000,
+      "repair": {
+        "lens_polish": 800,
+        "bulb_replacement": 1200,
+        "housing_repair": 2500
+      },
+      "repair_threshold": 0.25,
+      "repair_time_hours": {
+        "minor": 1,
+        "moderate": 2,
+        "severe": 3
+      },
+      "complexity": "low"
+    },
+    "taillight": { 
+      "min": 3000, 
+      "aftermarket": 4500, 
+      "avg": 7000, 
+      "oem": 11000, 
+      "max": 14000,
+      "repair": {
+        "lens_repair": 1000,
+        "bulb_replacement": 800,
+        "housing_repair": 2000
+      },
+      "repair_threshold": 0.3,
+      "repair_time_hours": {
+        "minor": 1,
+        "moderate": 2,
+        "severe": 3
+      },
+      "complexity": "low"
+    },
+    "glass": { 
+      "min": 3000, 
+      "aftermarket": 5000, 
+      "avg": 7000, 
+      "oem": 10000, 
+      "max": 12000,
+      "repair": {
+        "chip_repair": 800,
+        "crack_sealing": 1500
+      },
+      "repair_threshold": 0.15,
+      "repair_time_hours": {
+        "minor": 1,
+        "moderate": 2,
+        "severe": 3
+      },
+      "complexity": "medium"
+    },
+    "windshield": { 
+      "min": 5000, 
+      "aftermarket": 7000, 
+      "avg": 11000, 
+      "oem": 16000, 
+      "max": 20000,
+      "repair": {
+        "chip_repair": 1000,
+        "small_crack": 2000,
+        "edge_crack": 2500
+      },
+      "repair_threshold": 0.2,
+      "repair_time_hours": {
+        "minor": 2,
+        "moderate": 3,
+        "severe": 4
+      },
+      "complexity": "high"
+    },
+    "fender": { 
+      "min": 5000, 
+      "aftermarket": 8000, 
+      "avg": 12000, 
+      "oem": 17000, 
+      "max": 22000,
+      "repair": {
+        "dent_removal": 2500,
+        "paint_repair": 3500,
+        "panel_beating": 4500
+      },
+      "repair_threshold": 0.4,
+      "repair_time_hours": {
+        "minor": 3,
+        "moderate": 5,
+        "severe": 8
+      },
+      "complexity": "medium"
+    },
+    "hood": { 
+      "min": 12000, 
+      "aftermarket": 18000, 
+      "avg": 25000, 
+      "oem": 35000, 
+      "max": 42000,
+      "repair": {
+        "dent_removal": 4000,
+        "paint_repair": 6000,
+        "panel_beating": 8000,
+        "alignment": 3000
+      },
+      "repair_threshold": 0.3,
+      "repair_time_hours": {
+        "minor": 4,
+        "moderate": 8,
+        "severe": 16
+      },
+      "complexity": "high"
+    },
+    "trunk": { 
+      "min": 10000, 
+      "aftermarket": 15000, 
+      "avg": 22000, 
+      "oem": 30000, 
+      "max": 38000,
+      "repair": {
+        "dent_removal": 3500,
+        "paint_repair": 5000,
+        "latch_mechanism": 2500
+      },
+      "repair_threshold": 0.35,
+      "repair_time_hours": {
+        "minor": 3,
+        "moderate": 6,
+        "severe": 12
+      },
+      "complexity": "medium"
+    },
+    "mirror": { 
+      "min": 1500, 
+      "aftermarket": 2500, 
+      "avg": 4000, 
+      "oem": 6000, 
+      "max": 8000,
+      "repair": {
+        "glass_replacement": 800,
+        "housing_repair": 1200,
+        "motor_repair": 1800
+      },
+      "repair_threshold": 0.5,
+      "repair_time_hours": {
+        "minor": 0.5,
+        "moderate": 1,
+        "severe": 2
+      },
+      "complexity": "low"
+    },
+    "grille": { 
+      "min": 4000, 
+      "aftermarket": 6000, 
+      "avg": 9000, 
+      "oem": 14000, 
+      "max": 18000,
+      "repair": {
+        "mesh_repair": 1500,
+        "mounting_fix": 2000,
+        "paint_touch": 1200
+      },
+      "repair_threshold": 0.4,
+      "repair_time_hours": {
+        "minor": 2,
+        "moderate": 3,
+        "severe": 5
+      },
+      "complexity": "low"
+    },
+    "quarter_panel": { 
+      "min": 9000, 
+      "aftermarket": 13000, 
+      "avg": 20000, 
+      "oem": 28000, 
+      "max": 35000,
+      "repair": {
+        "dent_removal": 4000,
+        "panel_beating": 6000,
+        "paint_repair": 5000
+      },
+      "repair_threshold": 0.25,
+      "repair_time_hours": {
+        "minor": 6,
+        "moderate": 12,
+        "severe": 24
+      },
+      "complexity": "high"
+    }
+  },
+  "defaults": { 
+    "min": 3000, 
+    "aftermarket": 6000, 
+    "avg": 8000, 
+    "oem": 12000, 
+    "max": 20000,
+    "repair": {
+      "general_repair": 2000
+    },
+    "repair_threshold": 0.3,
+    "repair_time_hours": {
+      "minor": 2,
+      "moderate": 4,
+      "severe": 8
+    },
+    "complexity": "medium"
+  }
+}

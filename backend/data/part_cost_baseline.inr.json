@@ -1,0 +1,20 @@
+{
+  "currency": "INR",
+  "version": "2025-09-24-v1",
+  "source_note": "Approximate blended market ranges for common passenger vehicle parts in India (mix of aftermarket & OEM retail labor-inclusive estimates). Adjust as needed per region/model tier.",
+  "parts": {
+    "bumper": { "min": 6000, "aftermarket": 9000, "avg": 15000, "oem": 20000, "max": 25000 },
+    "door": { "min": 8000, "aftermarket": 12000, "avg": 18000, "oem": 25000, "max": 32000 },
+    "headlight": { "min": 4000, "aftermarket": 6000, "avg": 9000, "oem": 14000, "max": 18000 },
+    "taillight": { "min": 3000, "aftermarket": 4500, "avg": 7000, "oem": 11000, "max": 14000 },
+    "glass": { "min": 3000, "aftermarket": 5000, "avg": 7000, "oem": 10000, "max": 12000 },
+    "windshield": { "min": 5000, "aftermarket": 7000, "avg": 11000, "oem": 16000, "max": 20000 },
+    "fender": { "min": 5000, "aftermarket": 8000, "avg": 12000, "oem": 17000, "max": 22000 },
+    "hood": { "min": 12000, "aftermarket": 18000, "avg": 25000, "oem": 35000, "max": 42000 },
+    "trunk": { "min": 10000, "aftermarket": 15000, "avg": 22000, "oem": 30000, "max": 38000 },
+    "mirror": { "min": 1500, "aftermarket": 2500, "avg": 4000, "oem": 6000, "max": 8000 },
+    "grille": { "min": 4000, "aftermarket": 6000, "avg": 9000, "oem": 14000, "max": 18000 },
+    "quarter_panel": { "min": 9000, "aftermarket": 13000, "avg": 20000, "oem": 28000, "max": 35000 }
+  },
+  "defaults": { "min": 3000, "aftermarket": 6000, "avg": 8000, "oem": 12000, "max": 20000 }
+}

@@ -1,0 +1,25 @@
+{
+  "0": "bumper",
+  "1": "door", 
+  "2": "headlight",
+  "3": "glass",
+  "5": "hood",
+  "7": "door",
+  "28": "fender",
+  "32": "mirror",
+  "56": "windshield",
+  "62": "trunk",
+  "64": "grille",
+  "_comment": "Extended mapping for YOLOv11 COCO classes to car parts",
+  "_coco_mapping": {
+    "0": "person -> bumper (approximate)",
+    "2": "car -> headlight area", 
+    "5": "airplane -> hood (shape similarity)",
+    "7": "train -> door (rectangular shape)",
+    "28": "suitcase -> fender (shape)",
+    "32": "sports ball -> mirror (round)",
+    "56": "chair -> windshield (glass area)",
+    "62": "tv -> trunk (rectangular)",
+    "64": "laptop -> grille (frontal area)"
+  }
+}
