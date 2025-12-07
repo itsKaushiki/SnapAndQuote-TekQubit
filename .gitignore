@@ -69,3 +69,6 @@ Thumbs.db
 
 # Frontend build
 frontend/build/
+
+# Temporary files
+temp_*/
