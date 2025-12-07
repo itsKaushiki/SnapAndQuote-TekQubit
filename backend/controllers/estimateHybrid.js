@@ -230,3 +230,38 @@ exports.estimateCost = async (req, res) => {
     return res.status(500).json({ message: 'Unexpected estimation error' });
   }
 };
+exports.getBasePrice = (req, res) => {
+  try {
+    const { model, year } = req.query;
+    if (!model || !year) {
+      return res.status(400).json({ message: 'Model and year required' });
+    }
+
+    const pricesPath = path.join(__dirname, '..', 'data', 'car_prices.json');
+    let prices = {};
+    if (fs.existsSync(pricesPath)) {
+      prices = JSON.parse(fs.readFileSync(pricesPath, 'utf-8'));
+    }
+
+    // Simple lookup (case-insensitive)
+    const key = Object.keys(prices).find(k => k.toLowerCase() === model.toLowerCase());
+    const data = key ? prices[key] : { base: 500000, depreciationPerYear: 0.1 }; // Default fallback
+
+    const currentYear = new Date().getFullYear();
+    const age = Math.max(0, currentYear - parseInt(year));
+    
+    // Calculate depreciated value: Base * (1 - rate)^age
+    const depreciatedValue = data.base * Math.pow(1 - data.depreciationPerYear, age);
+
+    return res.json({
+      model: key || model,
+      year: parseInt(year),
+      basePrice: Math.round(depreciatedValue)
+    });
+
+  } catch (error) {
+    console.error('Base price error:', error);
+    res.status(500).json({ message: 'Failed to fetch base price' });
+  }
+};
+

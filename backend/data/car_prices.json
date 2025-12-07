@@ -1,0 +1,9 @@
+{
+  "Hyundai Creta": { "base": 1000000, "depreciationPerYear": 0.10 },
+  "Maruti Baleno": { "base": 650000, "depreciationPerYear": 0.08 },
+  "Honda City": { "base": 1100000, "depreciationPerYear": 0.12 },
+  "Toyota Fortuner": { "base": 3000000, "depreciationPerYear": 0.10 },
+  "Mahindra Thar": { "base": 1400000, "depreciationPerYear": 0.09 },
+  "Tata Nexon": { "base": 800000, "depreciationPerYear": 0.08 }
+}
+
