@@ -250,13 +250,17 @@ exports.getBasePrice = (req, res) => {
     const currentYear = new Date().getFullYear();
     const age = Math.max(0, currentYear - parseInt(year));
     
+    const originalBasePrice = data.base; // Original new car price
     // Calculate depreciated value: Base * (1 - rate)^age
     const depreciatedValue = data.base * Math.pow(1 - data.depreciationPerYear, age);
 
     return res.json({
       model: key || model,
       year: parseInt(year),
-      basePrice: Math.round(depreciatedValue)
+      originalBasePrice: Math.round(originalBasePrice), // Original new car price
+      basePrice: Math.round(depreciatedValue), // Depreciated price
+      depreciationRate: data.depreciationPerYear,
+      age: age
     });
 
   } catch (error) {

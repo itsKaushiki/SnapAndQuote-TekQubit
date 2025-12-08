@@ -40,4 +40,22 @@ router.post('/', upload.single('image'), (req, res) => {
   }
 });
 
+// Audio file upload endpoint
+router.post('/audio', upload.single('audio'), (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ message: 'No audio file uploaded' });
+    }
+
+    res.json({
+      message: 'Audio file uploaded successfully',
+      filename: req.file.filename,
+      originalName: req.file.originalname
+    });
+  } catch (error) {
+    console.error('Audio upload error:', error);
+    res.status(500).json({ message: 'Audio file upload failed' });
+  }
+});
+
 module.exports = router;

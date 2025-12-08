@@ -30,12 +30,18 @@ exports.detectDamage = (req, res) => {
       modelType = 'YOLOv5-ultra';
     }
     
-    // For YOLOv11, try yolo11n.pt first, then fallback to best.pt
+    // For YOLOv11, use pretrained model name (Ultralytics will download if needed)
+    // For YOLOv5, try best.pt in weights directory
     let weightsPath = path.join(projectRoot, 'ml_model', 'weights', 'best.pt');
     if (modelType === 'YOLOv11') {
+      // Use pretrained model name - Ultralytics will download automatically if not found locally
+      // First check if local file exists, otherwise use model name for auto-download
       const yolov11Weights = path.join(projectRoot, 'ml_model', 'weights', 'yolo11n.pt');
       if (fs.existsSync(yolov11Weights)) {
         weightsPath = yolov11Weights;
+      } else {
+        // Use model name - Ultralytics will download to cache automatically
+        weightsPath = 'yolo11n.pt';
       }
     }
 

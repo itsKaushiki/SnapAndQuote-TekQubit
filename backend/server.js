@@ -46,6 +46,7 @@ const chatModelsRoutes = require('./routes/chatModels');
 const reportsRoutes = require('./routes/reports');
 const historyRoutes = require('./routes/history');
 const interiorRoutes = require('./routes/interior');
+const audioRoutes = require('./routes/audio');
 
 app.use('/api/estimate', estimateRoutes);
 app.use('/api/upload', uploadRoutes);
@@ -55,6 +56,7 @@ app.use('/api/chat/models', chatModelsRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/interior', interiorRoutes);
+app.use('/api/audio', audioRoutes);
 
 console.log('✅ All routes registered including /api/history');
 

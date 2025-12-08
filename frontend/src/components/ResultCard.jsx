@@ -55,7 +55,7 @@ const ResultCard = ({
       {/* ENHANCED DUAL PRICING TABLE - 3RD PARTY vs 1ST PARTY */}
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-          💰 Complete Pricing Comparison: 3rd Party vs 1st Party
+          ⬛ Complete Pricing Comparison: 3rd Party vs 1st Party
         </h2>
         
         {/* Pricing Type Legend */}
@@ -84,7 +84,7 @@ const ResultCard = ({
                   🏭 1ST PARTY (OEM ORIGINAL)
                 </th>
                 <th rowSpan="2" className="border-2 border-gray-400 px-4 py-4 text-center font-bold text-purple-700 bg-purple-50">
-                  💸 Price Difference
+                  ⬛ Price Difference
                 </th>
               </tr>
               <tr className="bg-gray-50">
@@ -133,7 +133,7 @@ const ResultCard = ({
                     </td>
                     <td className="border-2 border-gray-400 px-3 py-4 text-center bg-green-100">
                       <div className="font-bold text-green-800 text-xl">₹{thirdPartyTotal.toLocaleString()}</div>
-                      <div className="text-xs text-green-700 mt-1 font-semibold">💰 Budget Option</div>
+                      <div className="text-xs text-green-700 mt-1 font-semibold">⬛ Budget Option</div>
                     </td>
                     
                     {/* 1ST PARTY COLUMNS */}
@@ -165,7 +165,7 @@ const ResultCard = ({
             <tfoot className="bg-gradient-to-r from-gray-200 to-gray-300">
               <tr>
                 <td className="border-2 border-gray-400 px-4 py-4 font-bold text-gray-800 text-lg">
-                  🔥 GRAND TOTAL
+                  ⬛ GRAND TOTAL
                 </td>
                 <td className="border-2 border-gray-400 px-3 py-4 text-center font-bold text-green-700 text-lg bg-green-100">
                   ₹{costBreakdown?.reduce((sum, item) => sum + (item.aftermarket || item.cost || 0), 0).toLocaleString()}
@@ -258,7 +258,7 @@ const ResultCard = ({
 
         {/* SAVINGS HIGHLIGHT */}
         <div className="mt-6 bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 rounded-xl p-6 text-center">
-          <h3 className="text-2xl font-bold text-purple-800 mb-3">💸 YOUR POTENTIAL SAVINGS</h3>
+          <h3 className="text-2xl font-bold text-purple-800 mb-3">⬛ YOUR POTENTIAL SAVINGS</h3>
           <div className="text-5xl font-bold text-purple-700 mb-2">
             ₹{costBreakdown?.reduce((sum, item) => {
               const thirdPartyTotal = (item.aftermarket || item.cost || 0) + Math.round((item.aftermarket || item.cost || 0) * 0.25);

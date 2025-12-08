@@ -32,7 +32,9 @@ def detect_yolov11(weights_path, source_path, conf_threshold=0.25, fallback_conf
     
     try:
         # Load YOLOv11 model
+        # Ultralytics YOLO can accept model names (e.g., 'yolo11n.pt') and will download automatically
         print(f"[DEBUG] Loading YOLOv11 model from: {weights_path}")
+        # Ultralytics will automatically download pretrained models if the file doesn't exist
         model = YOLO(weights_path)
         
         # Load class mapping

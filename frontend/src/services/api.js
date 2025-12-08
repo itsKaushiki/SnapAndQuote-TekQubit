@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const apiClient = axios.create({
-  baseURL: 'http://127.0.0.1:8080',
+  baseURL: 'http://localhost:5000',
   timeout: 120000, // increased timeout
   headers: {
     'Content-Type': 'application/json',
@@ -238,6 +238,71 @@ export const deleteReport = async (reportId) => {
   } catch (error) {
     console.error('Delete report API error:', error);
     throw new Error(error.response?.data?.message || 'Failed to delete report');
+  }
+};
+
+/**
+ * Upload audio file
+ * @param {File} audioFile - Audio file to upload
+ * @returns {Promise<Object>} Response data with filename
+ */
+export const uploadAudio = async (audioFile) => {
+  try {
+    if (!audioFile) {
+      throw new Error('Audio file is required');
+    }
+
+    const formData = new FormData();
+    formData.append('audio', audioFile);
+
+    const response = await apiClient.post('/api/upload/audio', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('🔥 Audio Upload Error:', error);
+    
+    if (error.response) {
+      const { status, data } = error.response;
+      throw new Error(data?.message || `Audio upload failed with status ${status}`);
+    } else if (error.request) {
+      throw new Error('No response from server. Please check your connection.');
+    } else {
+      throw new Error(error.message || 'Audio upload failed');
+    }
+  }
+};
+
+/**
+ * Analyze audio for anomalies
+ * @param {string} filename - Name of the uploaded audio file
+ * @returns {Promise<Object>} Response data with classification, score, confidence
+ */
+export const analyzeAudio = async (filename) => {
+  try {
+    if (!filename) {
+      throw new Error('Filename is required');
+    }
+
+    const response = await apiClient.post('/api/audio', {
+      filename: filename
+    });
+
+    return response.data; // { classification, score, confidence, probability_normal, probability_anomalous, isAnomalous }
+  } catch (error) {
+    console.error('🔥 Audio Analysis Error:', error);
+    
+    if (error.response) {
+      const { status, data } = error.response;
+      throw new Error(data?.message || `Audio analysis failed with status ${status}`);
+    } else if (error.request) {
+      throw new Error('No response from server. Please check your connection.');
+    } else {
+      throw new Error(error.message || 'Audio analysis failed');
+    }
   }
 };
 
