@@ -84,12 +84,6 @@ Open http://localhost:3000.
 3. Add baseline entry in `part_cost_baseline.inr.json`.
 4. Frontend automatically reflects new part in detection and cost breakdown.
 
-## Troubleshooting
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| `SyntaxError: Identifier 'detectedParts' has already been declared` | Duplicate destructuring | Fixed in `estimateHybrid.js` (remove second declaration) |
-| Empty detections | Low confidence | Lower threshold logic in `detect_ultra.py` auto-retries |
-| Cost looks unrealistic | Provider outlier | Normalization clamps to baseline ranges |
 
 ## Git Ignore & Large Files
 Root `.gitignore` excludes uploads, model weights (`*.pt`), build output, env files. Commit small config and code only.
