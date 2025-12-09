@@ -112,21 +112,4 @@ git commit -m "feat: normalize costs & add baseline dataset"
 git push
 ```
 
-## Future Enhancements
-- Severity scoring influencing cost (min→avg→max interpolation)
-- Caching identical part sets for cost estimation
-- Support labor rate regional adjustments
-- Authentication & user history
-
-## History Reset & Secret Remediation (2025-09-24)
-Earlier commits (now removed) accidentally contained real API keys inside `backend/.env`. The repository history was force-reinitialized (`git init` + fresh initial commit) to eliminate leaked blobs. Keys have been rotated. If you previously cloned the project before this date:
-
-1. Discard your old clone and re-clone to get the new clean history.
-2. Treat any keys you pulled as compromised and rotate them.
-3. Keep real secrets only in an untracked `.env` (a `.env.example` can be added for placeholders).
-
-GitHub secret scanning should no longer block pushes (legacy blob id removed). Open an issue if you notice any residual secrets.
-
-## License
-Add a license file (e.g., MIT) if you plan to open source.
 
